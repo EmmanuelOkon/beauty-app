@@ -7,13 +7,13 @@ type Props = {};
 
 const Hero = (props: Props) => {
   return (
-    <div className="bg-[#FEF3E2] relativ sm:h-screen bg-none lg:h-[1024px]  md:bg-[url('/assets/images/heroBg.png')] bg-no-repeat bg-right bg-contain">
+    <div className="bg-[#FEF3E2] sm:h-screen bg-none lg:h-[1024px]  md:bg-[url('/assets/images/heroBg.png')] bg-no-repeat bg-right bg-contain">
       <Navbar />
       <section className="flex wrappe  ">
-        <section className=" max-w-[636px] max-h-[1024px] md:p-10  ">
+        <section className="p-4 max-w-[636px] max-h-[1024px] md:p-10  ">
           <span className="text-[18px]  ">We can help your problem</span>
           <h1 className="text-primary header font-bold text-[46px] lg:text-[85px] leading-none tracking-normal relative ">
-            Maximize your bright&nbsp;face&nbsp;with clean skin{" "}
+            Maximize your bright face with clean skin{" "}
             <span className="absolute bottom-0 w-10 ">
               <Icons.sun />
             </span>{" "}
