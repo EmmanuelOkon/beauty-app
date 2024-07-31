@@ -31,12 +31,15 @@ const NavItems = () => {
         </ul>
         <Button
           asChild
-          className="mt-6 md:mt-0 flex lghidden rounded-none border-2 hover:text-white border-black p-2 bg-transparent text-[18px] text-black "
+          className="mt-6 md:mt-0 flex rounded-none border-2 border-black p-2 bg-transparent text-[18px] text-primary group hover:text-white"
           size="lg"
         >
-          <Link href="/" className="flex gap-2">
+          <Link
+            href="/"
+            className="flex gap-2 text-primary group-hover:text-white"
+          >
             Product Trailer
-            <Icons.playIcon />
+            <Icons.playIcon className="text-transparent group-hover:text-white" />
           </Link>
         </Button>
       </div>

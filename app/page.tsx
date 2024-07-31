@@ -7,6 +7,7 @@ export default function Home() {
     <>
       <div className="bg-red400">
         <Hero />
+        
       </div>
     </>
   );
