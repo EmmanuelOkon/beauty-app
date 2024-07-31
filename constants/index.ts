@@ -1,0 +1,35 @@
+export const headerLinks = [
+  {
+    label: "Home",
+    route: "/",
+  },
+  {
+    label: "Consultant",
+    route: "/consultant",
+  },
+  {
+    label: "Product",
+    route: "/product",
+  },
+  {
+    label: "Shop",
+    route: "/shop",
+  },
+  {
+    label: "About Us",
+    route: "/about-us",
+  },
+];
+
+export const eventDefaultValues = {
+  title: "",
+  description: "",
+  location: "",
+  imageUrl: "",
+  startDateTime: new Date(),
+  endDateTime: new Date(),
+  categoryId: "",
+  price: "",
+  isFree: false,
+  url: "",
+};
