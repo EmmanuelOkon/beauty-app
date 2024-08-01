@@ -9,22 +9,24 @@ type Props = {};
 
 const Hero = (props: Props) => {
   return (
-    <div className="bg-[#FEF3E2] sm:h-screen bg-none xl:h-[1024px]  md:bg-[url('/assets/images/heroBg.png')] bg-no-repeat bg-right bg-contain">
+    <div className="bg-[#FEF3E2]  h-full  2xl:h-[1024px] ">
       <Navbar />
-      <section className="fle wrappe  ">
-        <section className="p-4 max-w[636px] max-h-[1024px] md:p-10  ">
-          <span className="text-[18px]  ">We can help your problem</span>
-          <h1 className="text-primary header font-bold text-[46px] lg:text-[85px] leading-none tracking-normal relative max-w-[636px] ">
-            Maximize your bright face with clean skin{" "}
-            <span className="absolute bottom-0 w-10 ">
-              <Icons.sun />
-            </span>{" "}
-          </h1>
-          <p className="pt-5 text-[18px] max-w-[573px] text-[#565656] ">
-            Get a skinseed product right away to make your skin bright again.
-            suitable for those of you who often go out in the sun using a cream
-            that doesn&apos;t fade easily
-          </p>
+      <section className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center px-4 md:px-10 xl:px-0 ">
+        <section className=" max-h-[1024px] ">
+          <div>
+            <span className="text-[18px]  ">We can help your problem</span>
+            <h1 className="text-primary header font-bold text-[46px] lg:text-[75px] leading-none tracking-normal relative max-w-[636px] ">
+              Maximize your bright face with clean skin{" "}
+              <span className="absolute bottom-0 w-10 ">
+                <Icons.sun />
+              </span>{" "}
+            </h1>
+            <p className="pt-5 text-[18px] max-w-[573px] text-[#565656] ">
+              Get a skinseed product right away to make your skin bright again.
+              suitable for those of you who often go out in the sun using a
+              cream that doesn&apos;t fade easily
+            </p>
+          </div>
 
           <div className="flex items-center flex-col md:flex-row mt-6 gap-6">
             <Button
@@ -49,6 +51,13 @@ const Hero = (props: Props) => {
             </Button>
           </div>
         </section>
+        <Image
+          src="/assets/images/heroImg.png"
+          width={1000}
+          height={1000}
+          alt="heroImg"
+          className="w-[479px] h-full  "
+        />
       </section>
     </div>
   );
