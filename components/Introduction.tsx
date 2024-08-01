@@ -4,7 +4,7 @@ import React from "react";
 const Introduction = () => {
   return (
     <div className="wrapper">
-      <div className="flex flex-col-reverse md:flex-row items-center justify-between p-4 px-4 md:px-10 xl:px-0 md:p20 ">
+      <div className="flex flex-col-reverse md:flex-row items-center gap-4 justify-between p-4 md:px4 md:px-10 xl:px-0 md:p20 ">
         <div className="w-full md:w-1/2  ">
           <Image
             src="/assets/images/femaleGettingLaser.png"

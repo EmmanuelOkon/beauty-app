@@ -55,7 +55,9 @@ const ServicesSection: React.FC = () => {
                     className="w-12 h-12"
                   />
                 </div>
-                <h3 className="text-xl font-semibold header">{service.label}</h3>
+                <h3 className="text-xl font-semibold header">
+                  {service.label}
+                </h3>
               </div>
             </>
           ))}

@@ -10,15 +10,15 @@ type Props = {};
 const Hero = (props: Props) => {
   return (
     <div className="bg-[#FEF3E2]  h-full  2xl:h-[1024px] ">
-      <Navbar />
+      {/* <Navbar /> */}
       <section className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center px-4 md:px-10 xl:px-0 ">
         <section className=" max-h-[1024px] ">
           <div>
             <span className="text-[18px]  ">We can help your problem</span>
             <h1 className="text-primary header font-bold text-[46px] lg:text-[75px] leading-none tracking-normal relative max-w-[636px] ">
-              Maximize your bright face with clean skin{" "}
-              <span className="absolute bottom-0 w-10 ">
-                <Icons.sun />
+              Maximize your bright&nbsp;face&nbsp;with clean skin{" "}
+              <span className="absolute -bottom-4 md:bottom-0 w-10  ">
+                <Icons.sun className="w-10 " />
               </span>{" "}
             </h1>
             <p className="pt-5 text-[18px] max-w-[573px] text-[#565656] ">

@@ -92,49 +92,50 @@ const Footer = () => {
 
   return (
     <footer className="bg-primary-blue" aria-labelledby="footer-heading">
-      <div className="lg:max-w-7xl 2xl:max-w-[1560px] mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
+      <div className="lg:max-w-7xl 2xl:max-w-[1560px] mx-auto py-12 px-4 md:px-10 lg:py-16 lg:px8">
         <div className="xl:grid xl:grid-cols-3 xl:gap-8">
           <div className="grid md:grid-cols-2 lg:grid-cols3 gap-8 xl:col-span-2">
             <div className="md:grid md:grid-cols-2 md:gap-4">
               <div>
-                <Link href="/">
+                <Link href="/" className="flex items-center gap-2">
                   <Image
                     alt="logo"
                     width={1200}
                     height={1200}
                     src="/assets/images/beautyWhiteLogo.png"
-                    className="w-[30%] lg:w-[60%] h-auto"
+                    className="w-[30%] lg:w-50%] h-auto"
                   />
+                  <p className="text-white header font-bold text-[25px] ">
+                    Skinseed
+                  </p>
                 </Link>
                 <div className="my-4 text-white">
                   <p className="block flex-shrink-0 font-normal">
-                    KK 621 St, Kigali, Rwanda, Gikondo
+                    90 St Johns Brooklyn, NY, United States
                   </p>
                   <Link
                     href="tel:+250786416032"
                     className="block flex-shrink-0"
                   >
-                    +250233883032
+                    (+01)888 999 77
                   </Link>
                   <Link href="/" className="block flex-shrink-0">
                     info@skinseed.com
                   </Link>
                 </div>
                 <div className="  ">
-                  {/* <p className="text-white pb-2">Follow us</p> */}
                   <div className="flex items-center space-x-4">
                     {navigation.social.map((item) => {
-                      const Icon = item.icon; // Assign the icon component to a variable
+                      const Icon = item.icon;
                       return (
                         <Link
                           key={item.name}
                           href={item.href}
-                          className="text-white hover:textgrey-600 bg-primary-500 hover:bg-primary p-2 rounded-full"
+                          className="text-white hover:textgrey-600 bg-primary-500 hover:bg-[#4639a6] p-2 rounded-full"
                         >
                           {Icon && (
                             <Icon className="h-6 w-6" aria-hidden="true" />
                           )}{" "}
-                          {/* Render the icon component */}
                         </Link>
                       );
                     })}
@@ -175,7 +176,7 @@ const Footer = () => {
               or promotions.
             </p>
             <form className="mt-4 " onSubmit={handleSubmit}>
-              <div className="flex items-center border border-gray-300 rounded-md px-3 py-1 mb-4">
+              <div className="flex items-center border border-gray-300 rounded-none px-3 py-1 mb-4">
                 <input
                   autoComplete="off"
                   value={email}
@@ -184,19 +185,19 @@ const Footer = () => {
                   placeholder="Enter your email"
                 />
               </div>
-              <div className="mt-3 rounded-md sm:mt-0 sm3 sm:flex-shrink-0">
+              <div className="mt-3 rounded-none sm:mt-0 sm3 sm:flex-shrink-0">
                 <button
                   type="submit"
                   className={classNames(
                     loading
                       ? " w-[150px] h[22px] px4 py2 bg-lemonGreen"
                       : "bg-primary-500 text-white hover:bg-lemonGreen hover:text-green py-2 ",
-                    "w-1/3 flex items-center justify-center border border-transparent rounded-md text-base font-medium  hover:bg-primary hover:text-white focus:ring-0"
+                    "w-1/3 flex items-center justify-center border border-transparent rounded-none text-base font-medium  hover:bg-[#4639a6] hover:text-white focus:ring-0"
                   )}
                 >
                   {loading ? (
                     <>
-                      <div className="bg-primary-500 text-white h-[42px] rounded-md w-[150px] py2 my-0 flex items-center justify-center">
+                      <div className="bg-primary-500 text-white h-[42px] rounded-none w-[150px] py2 my-0 flex items-center justify-center">
                         Loading
                       </div>
                     </>
@@ -208,8 +209,8 @@ const Footer = () => {
             </form>
           </div>
         </div>
-        <div className="mt-16 border-t border-primary pt-8 flex items-center justify-center">
-          <p className="mt-8 text-base text-primary-500 md:mt-0">
+        <div className="mt-16 border-t border-primary-500 pt-8 flex items-center justify-center">
+          <p className="mt-8 text-base text-white primary-500 md:mt-0">
             &copy; {new Date().getFullYear()} Skinseed. All rights reserved.
           </p>
         </div>

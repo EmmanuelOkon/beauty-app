@@ -4,9 +4,6 @@
 
 @layer base {
   :root {
-    --font-sans: 'Poppins', sans-serif;
-    --font-serif: 'Playfair Display', serif;
-
     --background: 0 0% 100%;
     --foreground: 222.2 84% 4.9%;
 
@@ -76,35 +73,24 @@
   scroll-behavior: smooth;
 }
 
-body {
-  font-family: var(--font-sans);
-}
 
-.h1-serif {
-  font-family: var(--font-serif);
-}
 
 .filter-grey {
   filter: brightness(0) saturate(100%) invert(47%) sepia(0%) saturate(217%) hue-rotate(32deg) brightness(98%) contrast(92%);
 }
 
+.header {
+  font-family: 'Playfair Display Variable', serif;
+}
+
+body {
+  font-family: 'DM Sans Variable', sans-serif;
+}
+
 /* ========================================== TAILWIND STYLES */
 @layer utilities {
-  .header {
-    @apply font-playfairDisplay;
-  }
 
-  .bodyFont {
-    @apply font-poppins;
-  }
 
-  .font-sans {
-    font-family: var(--font-sans);
-  }
-
-  .font-serif {
-    font-family: var(--font-serif);
-  }
 
   .wrapper {
     @apply max-w-7xl lg:mx-auto p-5 md:px-10 xl:px-0 w-full;
@@ -304,4 +290,117 @@ body {
 
 .react-datepicker__time-list-item--selected {
   background-color: #624cf5 !important;
+}
+
+.loader {
+  display: block;
+  --height-of-loader: 2px;
+  --loader-color: #226a35;
+  width: 200px;
+  height: var(--height-of-loader);
+  border-radius: 50px;
+  background-color: rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  .loader {
+    width: 100px;
+  }
+}
+
+.loader::before {
+  content: "";
+  position: absolute;
+  background: var(--loader-color);
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  border-radius: 50px;
+  animation: moving 2.6s linear infinite;
+}
+
+@keyframes moving {
+
+  0%,
+  100% {
+    width: 0;
+    left: 0;
+    right: 0;
+  }
+
+  25%,
+  75% {
+    width: 100%;
+    left: 0;
+  }
+
+  50% {
+    width: 100%;
+    left: 100%;
+  }
+}
+
+.spinner {
+  border: 3px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 3px solid #226a35;
+  width: 38px;
+  height: 38px;
+  -webkit-animation: spin 1s linear infinite;
+  /* Safari */
+  animation: spin 0.8s linear infinite;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.origin {
+  margin: 0px;
+  padding: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.circle {
+  display: block;
+  z-index: 10;
+  border: 3px solid #f3f3f3;
+  border-radius: 50%;
+  border-top-color: #226a35;
+  -webkit-animation: pen 0.6s linear infinite;
+  animation: pen 0.6s linear infinite;
+}
+
+@-webkit-keyframes pen {
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes pen {
+  to {
+    transform: rotate(360deg);
+  }
 }

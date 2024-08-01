@@ -1,20 +1,13 @@
 import type { Metadata } from "next";
-import { Poppins, Playfair_Display } from "next/font/google";
+
 import "./globals.css";
-import { cn } from "@/lib/utils";
+
 import { Toaster } from "sonner";
+import "@fontsource-variable/playfair-display";
 
-const fontSans = Poppins({
-  subsets: ["latin"],
-  weight: ["200", "300", "400", "500", "600", "700", "800"],
-  variable: "--font-sans",
-});
-
-const fontSerif = Playfair_Display({
-  subsets: ["latin"],
-  weight: ["400", "700", "800", "900"],
-  variable: "--font-serif",
-});
+import "@fontsource-variable/dm-sans";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: "Beauty",
@@ -32,12 +25,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={cn(fontSans.variable, fontSerif.variable)}
-        suppressHydrationWarning={true}
-      >
+      <body suppressHydrationWarning={true}>
+        <Navbar />
         {children}
         <Toaster richColors />
+        <Footer />
       </body>
     </html>
   );

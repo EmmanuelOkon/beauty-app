@@ -17,17 +17,18 @@ const MobileNav = () => {
         <SheetContent className="flex flex-col gap-6 bg-white lg:hidden">
           <div className="flex justify-between items-center w-full">
             <Image
-              src="/assets/images/logo.svg"
+              src="/assets/images/beautyGreyLogo.png"
               alt="logo"
               width={128}
               height={38}
+              className="w-[20%] "
             />
 
             <SheetClose>
               <X className="h-8 w-8" />
             </SheetClose>
           </div>
-          <Separator className="border border-gray-50" />
+          <Separator className="border border-primary" />
           <NavItems />
         </SheetContent>
       </Sheet>

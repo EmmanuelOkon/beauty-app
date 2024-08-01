@@ -7,42 +7,42 @@ const reviews = [
     name: "Jack",
     username: "@jack",
     body: "Wow! Very amazing. Thanks for the products from skinseed, I really love using skin products to help me out in the sun! I'm waiting for an amazing new product",
-    img: "https://avatar.vercel.sh/jack",
+    img: "/assets/images/customer1.png",
   },
   {
     name: "Jill",
     username: "@jill",
     body: "Wow! Very amazing. Thanks for the products from skinseed, I really love using skin products to help me out in the sun! I'm waiting for an amazing new product",
-    img: "https://avatar.vercel.sh/jill",
+    img: "/assets/images/customer2.png",
   },
   {
     name: "John",
     username: "@john",
     body: "Wow! Very amazing. Thanks for the products from skinseed, I really love using skin products to help me out in the sun! I'm waiting for an amazing new product",
-    img: "https://avatar.vercel.sh/john",
+    img: "/assets/images/customer3.png",
   },
   {
     name: "Jane",
     username: "@jane",
     body: "Wow! Very amazing. Thanks for the products from skinseed, I really love using skin products to help me out in the sun! I'm waiting for an amazing new product",
-    img: "https://avatar.vercel.sh/jane",
+    img: "/assets/images/customer4.png",
   },
   {
     name: "Jenny",
     username: "@jenny",
     body: "Wow! Very amazing. Thanks for the products from skinseed, I really love using skin products to help me out in the sun! I'm waiting for an amazing new product",
-    img: "https://avatar.vercel.sh/jenny",
+    img: "/assets/images/customer5.png",
   },
   {
     name: "James",
     username: "@james",
     body: "Wow! Very amazing. Thanks for the products from skinseed, I really love using skin products to help me out in the sun! I'm waiting for an amazing new product",
-    img: "https://avatar.vercel.sh/james",
+    img: "/assets/images/customer6.png",
   },
 ];
 
 const firstRow = reviews.slice(0, reviews.length / 2);
-const secondRow = reviews.slice(reviews.length / 2);
+
 
 const ReviewCard = ({
   img,
@@ -88,18 +88,13 @@ const ReviewCard = ({
 export function Testimonials() {
   return (
     <section className="bg-[#FEF3E2] py-10 ">
-      <h1 className="text-center header text-[48px] text-primary w-1/3 mx-auto leading-none pb-4 ">What customers say about our products</h1>
+      <h1 className="text-center header text-[32px] px-4 lg:text-[48px] text-primary md:w-2/3 lg:w-1/3 mx-auto leading-none pb-4 ">What customers say about our products</h1>
       <div className="relative flex h-full w-full flex-col items-center justify-center overflow-hidden bg-background">
         <Marquee pauseOnHover className="[--duration:20s]">
           {firstRow.map((review) => (
             <ReviewCard key={review.username} {...review} />
           ))}
         </Marquee>
-        {/* <Marquee reverse pauseOnHover className="[--duration:20s]">
-          {secondRow.map((review) => (
-            <ReviewCard key={review.username} {...review} />
-          ))}
-        </Marquee> */}
         <div className="pointer-events-none absolute inset-y-0 left-0 w-1/3 bg-gradient-tor from-white dark:from-background"></div>
         <div className="pointer-events-none absolute inset-y-0 right-0 w-1/3 bg-gradient-tol from-white dark:from-background"></div>
       </div>
