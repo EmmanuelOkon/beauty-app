@@ -17,7 +17,7 @@ const Introduction = () => {
         <div className="w-full md:w-1/2">
           <span className="text-[16px] text-black ">We Provide</span>
           <h1 className="text-primary header text-[32px] font-bold ">
-            Welcome to Spa Center
+            Welcome to Skinseed
           </h1>
           <p className="text-primary text-[16px] pb-10">
             Spread over two floors, our beautiful spa offer a soothing
